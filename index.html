@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BILLIE. | Blog da Billie Eilish</title>
+
+<!-- FONTES - Syne para títulos grandes e Inter para leitura -->
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Inter:wght@300;400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<style>
+/* ===== PALETA OFICIAL DA BILLIE =====
+#0A0A0A = preto profundo - fundo principal dela
+#B6FF00 = verde neon - era 2019, cabelo com raiz verde
+#1A2332 = azul acinzentado - era Hit Me Hard And Soft
+#E8E6E1 = bege pálido - contraste chique
+#101A14 = verde musgo escuro - vibe gótica
+*/
+:root{
+  --black:#0A0A0A;
+  --neon:#B6FF00;
+  --blue:#1A2332;
+  --beige:#E8E6E1;
+  --moss:#101A14;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--black); color:var(--beige); font-family:'Inter',sans-serif; overflow-x:hidden}
+::selection{background:var(--neon); color:#000}
+
+/* ===== HEADER FIXO ===== */
+header{
+  position:fixed; top:0; width:100%; z-index:100;
+  padding:18px 0; transition:.4s;
+  border-bottom:1px solid transparent;
+}
+header.scrolled{
+  background:rgba(10,10,10,.85);
+  backdrop-filter:blur(20px);
+  border-color:rgba(182,255,0,.2);
+}
+.container{max-width:1200px; margin:0 auto; padding:0 24px}
+.nav{display:flex; justify-content:space-between; align-items:center}
+.logo{font-family:'Syne'; font-weight:800; font-size:22px; letter-spacing:-1px}
+.menu{display:flex; gap:24px}
+.menu a{color:var(--beige); text-decoration:none; font-size:11px; letter-spacing:.2em; text-transform:uppercase; opacity:.7}
+.menu a:hover{color:var(--neon); opacity:1}
+
+/* ===== HERO - BANNER PRINCIPAL ===== */
+.hero{
+  min-height:100vh; display:flex; align-items:center;
+  position:relative; overflow:hidden; padding-top:80px;
+}
+.hero-bg{
+  position:absolute; inset:0;
+  background: radial-gradient(600px at 70% -10%, rgba(182,255,0,.15), transparent),
+              linear-gradient(to bottom, var(--moss), var(--black));
+}
+.hero h1{
+  font-family:'Syne'; font-size:18vw; line-height:.85; font-weight:800;
+  letter-spacing:-5px; position:relative; z-index:2;
+}
+@media(min-width:900px){ .hero h1{font-size:130px} }
+.hero h1 .outline{-webkit-text-stroke:1px var(--beige); color:transparent}
+.hero p{max-width:400px; margin-top:20px; line-height:1.7; color:rgba(232,230,225,.6)}
+.badge{
+  display:inline-flex; padding:6px 12px; border-radius:999px;
+  background:rgba(182,255,0,.1); border:1px solid rgba(182,255,0,.2);
+  color:var(--neon); font-size:10px; letter-spacing:.2em; text-transform:uppercase;
+}
+
+/* ===== SEÇÕES ===== */
+section{padding:90px 0; position:relative}
+.title-big{font-family:'Bebas Neue'; font-size:70px; line-height:.9}
+@media(min-width:900px){.title-big{font-size:110px}}
+
+.sobre{background:var(--beige); color:#000; border-radius:50px 50px 0 0}
+.card-era{
+  background:var(--moss); border:1px solid rgba(255,255,255,.1);
+  border-radius:28px; padding:28px; transition:.4s; min-height:380px;
+}
+.card-era:hover{border-color:var(--neon); transform:translateY(-6px)}
+.ano{font-family:'Bebas Neue'; font-size:50px; color:var(--neon)}
+
+.disc-grid{display:grid; gap:20px; grid-template-columns:1fr}
+@media(min-width:900px){.disc-grid{grid-template-columns:1fr 1fr}}
+.disc-card{
+  background:#000; border:1px solid rgba(255,255,255,.1);
+  border-radius:24px; padding:20px; display:flex; gap:20px; align-items:center;
+}
+.capa{
+  width:110px; height:110px; border-radius:14px; flex-shrink:0;
+  display:grid; place-items:center; font-family:'Bebas Neue'; font-size:40px;
+}
+
+/* ===== FOOTER ===== */
+footer{background:var(--beige); color:#000; padding:60px 0; border-radius:40px 40px 0 0}
+input{height:48px; padding:0 20px; border-radius:999px; border:1px solid #ccc; width:100%}
+button.btn{
+  height:48px; padding:0 28px; border-radius:999px; border:0;
+  background:#000; color:var(--beige); font-weight:700; cursor:pointer;
+}
+button.btn:hover{background:var(--black); color:var(--neon)}
+</style>
+</head>
+<body>
+
+<!-- HEADER - MENU DO TOPO -->
+<header id="header">
+  <div class="container nav">
+    <div class="logo">BILLIE<span style="color:var(--neon)">.</span></div>
+    <nav class="menu">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#eras">Eras</a>
+      <a href="#discografia">Discografia</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO - PRIMEIRA DOBRA DO BLOG -->
+<section id="inicio" class="hero">
+  <div class="hero-bg"></div>
+  <div class="container" style="position:relative; z-index:2">
+    <span class="badge">● Hit Me Hard and Soft Tour 2024/25</span>
+    <h1>billie<br><span class="outline">eilish</span></h1>
+    <p>
+      <b style="color:var(--beige)">Billie Eilish Pirate Baird O'Connell</b>, nascida em 18 de dezembro de 2001 em Los Angeles. 
+      Do quarto com o irmão FINNEAS para 9 Grammys e 2 Oscars. Dark pop, letras cruas e moda oversized. Não é personagem, é ela.
+    </p>
+  </div>
+</section>
+
+<!-- SOBRE - BIOGRAFIA -->
+<section id="sobre" class="sobre">
+  <div class="container">
+    <h2 class="title-big" style="color:#000">SOBRE A<br>BILLIE</h2>
+    <div style="display:grid; gap:40px; margin-top:40px; grid-template-columns:1fr; max-width:900px">
+      <!-- Texto principal - você pode editar aqui -->
+      <p style="font-size:18px; line-height:1.6; font-family:'Syne'">
+        Criada em uma família de músicos e atores, Billie foi educada em casa e começou a compor aos 11 anos. 
+        O estouro veio com "ocean eyes" em 2015, postada no SoundCloud.
+      </p>
+      <p style="line-height:1.9">
+        Conhecida por falar abertamente sobre depressão, sinestesia, veganismo e imagem corporal. 
+        Seu estilo oversized começou como uma forma de não ser sexualizada. Hoje é ícone fashion, ativista climática 
+        e a artista mais jovem a ganhar as 4 categorias principais do Grammy na mesma noite.
+        Ganhou Oscar por "No Time To Die" (007) e por "What Was I Made For?" da Barbie.
+      </p>
+      <!-- Ficha técnica rápida -->
+      <div style="display:flex; gap:20px; flex-wrap:wrap; margin-top:20px">
+        <div style="background:#000; color:var(--beige); padding:14px 20px; border-radius:14px">Nascimento: 18/12/2001</div>
+        <div style="background:#000; color:var(--beige); padding:14px 20px; border-radius:14px">Irmão/produtor: FINNEAS</div>
+        <div style="background:var(--neon); color:#000; padding:14px 20px; border-radius:14px; font-weight:800">110M+ ouvintes mensais</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ERAS - TIMELINE DAS FASES -->
+<section id="eras">
+  <div class="container">
+    <h2 class="title-big">ERAS</h2>
+    <p style="opacity:.5; margin:10px 0 40px">Cada era tem uma cor, um cabelo e uma personalidade.</p>
+    
+    <div class="disc-grid">
+      <!-- Era 1 -->
+      <div class="card-era">
+        <div class="ano">2017</div>
+        <h3>dont smile at me</h3>
+        <p style="opacity:.6; font-size:14px; margin-top:12px; line-height:1.6">
+          EP de estreia. Estética cinza, triste, com toques de azul. Hits: ocean eyes, idontwannabeyouanymore. A menina de 15 anos que recusou sorrir pra câmera.
+        </p>
+      </div>
+      <!-- Era 2 - VERDE NEON -->
+      <div class="card-era" style="background:var(--beige); color:#000">
+        <div class="ano" style="color:#000">2019</div>
+        <h3>WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?</h3>
+        <p style="opacity:.7; font-size:14px; margin-top:12px; line-height:1.6">
+          Era do verde neon #B6FF00 e bad guy. Álbum #1 da Billboard com 17 anos. Ganhou 5 Grammys. Terror pop, sussurros e aranhas na boca.
+        </p>
+      </div>
+      <!-- Era 3 -->
+      <div class="card-era">
+        <div class="ano">2021</div>
+        <h3>Happier Than Ever</h3>
+        <p style="opacity:.6; font-size:14px; margin-top:12px; line-height:1.6">
+          Loira platinada, vibe Old Hollywood. Mais madura, mais rock. Faixa título com gritaria icônica. Documentário na Apple TV+.
+        </p>
+      </div>
+      <!-- Era 4 - ATUAL -->
+      <div class="card-era" style="border-color:var(--neon)">
+        <div class="ano">2024</div>
+        <h3>HIT ME HARD AND SOFT</h3>
+        <p style="opacity:.6; font-size:14px; margin-top:12px; line-height:1.6">
+          Cabelo preto com azul, retorno ao dark. BIRDS OF A FEATHER, WILDFLOWER, LUNCH. Álbum mais elogiado da carreira. Sem singles antes, só arte.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCOGRAFIA -->
+<section id="discografia" style="background:var(--moss)">
+  <div class="container">
+    <h2 class="title-big">DISCOGRAFIA</h2>
+    <div class="disc-grid" style="margin-top:40px">
+      
+      <div class="disc-card">
+        <div class="capa" style="background:linear-gradient(135deg,#222,#555)">WWAFA</div>
+        <div>
+          <b>WHEN WE ALL FALL ASLEEP...</b><br>
+          <span style="font-size:12px; opacity:.5">2019 • 14 faixas • bad guy, when the party's over, bury a friend</span>
+        </div>
+      </div>
+
+      <div class="disc-card">
+        <div class="capa" style="background:linear-gradient(135deg,#C9A86A,#E8E6E1); color:#000">HTE</div>
+        <div>
+          <b>HAPPIER THAN EVER</b><br>
+          <span style="font-size:12px; opacity:.5">2021 • 16 faixas • Happier Than Ever, NDA, Therefore I Am</span>
+        </div>
+      </div>
+
+      <div class="disc-card" style="border-color:var(--neon)">
+        <div class="capa" style="background:linear-gradient(135deg,var(--blue),var(--moss)); color:var(--neon)">HMHAS</div>
+        <div>
+          <b>HIT ME HARD AND SOFT</b><br>
+          <span style="font-size:12px; opacity:.5">2024 • 10 faixas • BIRDS OF A FEATHER, WILDFLOWER, BLUE</span>
+        </div>
+      </div>
+
+      <div class="disc-card">
+        <div class="capa" style="background:linear-gradient(135deg,#B6FF00,#101A14); color:#000">LIVE</div>
+        <div>
+          <b>Happier Than Ever - Live</b><br>
+          <span style="font-size:12px; opacity:.5">2023 • Coachella, Grammy, Oscar performances</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER / NEWSLETTER -->
+<footer>
+  <div class="container">
+    <h2 style="font-family:'Syne'; font-size:40px; line-height:.9; font-weight:800">ENTRA PRO<br>CLUBE DA BILLIE.</h2>
+    <p style="margin:16px 0 24px; opacity:.6">Notícias, drops e ingressos antes de todo mundo.</p>
+    
+    <!-- Formulário simples com JS -->
+    <form onsubmit="enviar(event)" style="display:flex; gap:10px; max-width:420px; flex-wrap:wrap">
+      <input id="email" type="email" placeholder="seu@email.com" required>
+      <button class="btn" type="submit">ENVIAR</button>
+    </form>
+    <p style="font-size:11px; opacity:.4; margin-top:40px">© 2026 feito por fã, sem fins lucrativos. Cores inspiradas na Billie Eilish.</p>
+  </div>
+</footer>
+
+<script>
+// Deixa o header com blur quando rola
+window.addEventListener('scroll', ()=>{
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20)
+});
+
+// Função da newsletter
+function enviar(e){
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  alert('Bem-vinda(o) ao clube, ' + email + ' ! 💚 (aqui você ligaria com backend)');
+  e.target.reset();
+}
+</script>
+</body>
+</html>
